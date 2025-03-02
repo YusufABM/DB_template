@@ -36,3 +36,11 @@ You can view a sample PDF of the template here:
 ![image](https://github.com/user-attachments/assets/8e21b217-c961-49d6-8284-54928c149c20)
 
 ---
+
+## Template Features
+- Predefined styles for SQL code listings using the `listings` package.
+- Professional table formatting with the `booktabs` package.
+- Hyperlinks and cross-references using the `hyperref` package.
+- Custom headers and footers with the `fancyhdr` package.
+
+---
