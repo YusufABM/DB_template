@@ -1,0 +1,192 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Author:     Yusuf Abdirizak                  %
+% Template:   Simple LaTeX Template for DB     %
+% Created on: 26.02.2025                       %
+% Purpose:    For use in the course            %
+%             Database Systems / Databases /   %
+%             Implementation and Applications  %
+%             of Databases                     %
+%                                              %
+%             Aarhus University                %
+%             Department of Computer Science   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[twoside, a4paper, 11pt]{article}
+
+% Basic packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{mysqlblue}{HTML}{00758F}
+\definecolor{mysqlorange}{HTML}{F29111}
+
+\hypersetup{
+	colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+	breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+	plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+	hypertexnames=true, pdfhighlight=/O,
+	urlcolor=brown, linkcolor=RoyalBlue, citecolor=BlueGreen
+} 
+
+% Listings setup for SQL
+\lstset{
+	language=SQL,
+	basicstyle=\small\ttfamily,
+	keywordstyle=\color{mysqlblue}\bfseries,
+	commentstyle=\color{gray},
+	stringstyle=\color{mysqlorange},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	stepnumber=1,
+	numbersep=8pt,
+	showstringspaces=false,
+	breaklines=true,
+	captionpos=b,
+	frame=single
+}
+
+% Header setup
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\GRP}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+
+% Add Contributors: Name and StudN.----------------------------------------------------------
+\newcommand{\StudA}{\small Student - 1234567}
+\newcommand{\StudB}{\small Student - 1234567}
+\newcommand{\StudC}{\small Student - 1234567}
+
+% Add group number
+\newcommand{\GRP}{ GRP XX}
+
+% Add study program (CS, IT, Informatics...) & ECTS points (5 or 10) 
+\newcommand{\study}{ CS - X ECTS}
+
+%Delete StudC here if not used 
+\newcommand{\groupinfo}{\GRP \study \\ \StudA\\ \StudB\\ \StudC\\}
+%---------------------------------------------------------------------------------------------
+
+
+\begin{document}
+	
+	\title{Hand in X DB25} %Hand in number here
+	\author{ \groupinfo}
+	\date{}
+	%\date{\today} % Delete % if you want to add date 
+	\maketitle
+	\thispagestyle{empty}
+%---------------------------------------------------------------------------------------------	
+
+\section{Task title}
+\subsection*{a)}
+SQL code can just be copy pasted between the begin\{lstlistings\} end\{lstlistings\}
+\begin{lstlisting}[label=First, caption={SQL code}]
+	INSERT INTO Equipment VALUES ('Shannon-164','projector');
+	INSERT INTO Equipment VALUES ('Shannon-157','projector');
+	INSERT INTO Equipment VALUES ('Shannon-159','projector');
+\end{lstlisting}
+
+\noindent
+Label makes it possible to reference a code section easily \autoref{First}. 
+
+\subsection*{b)}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{gfx/logo}
+	\caption{This is how you insert a screenshot} %Caption can be deletede if there is no need for it
+	\label{fig:ScreenShot}
+\end{figure}
+
+\noindent
+Screenshot shown in \autoref{fig:ScreenShot} has to be add to the folder \textbf{gfx}.
+
+
+\begin{lstlisting}[label=Second]
+DROP TABLE IF EXISTS Equipment;
+
+CREATE TABLE `Equipment`(
+`room` VARCHAR(15),
+`type` VARCHAR(20)
+);
+\end{lstlisting}
+\noindent
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec accumsan malesuada ligula, sit amet malesuada elit facilisis quis. Aliquam sed vestibulum lorem. Maecenas ut laoreet risus, eu iaculis magna.  Pellentesque varius ex nunc, id efficitur orci cursus a. Vivamus et erat urna. Phasellus non vulputate ante. Nunc semper est vel elit fringilla facilisis. Integer sodales cursus scelerisque.  Nunc mattis lorem eu tempus feugiat. Etiam suscipit, purus sed fermentum tincidunt, leo dui fermentum massa, sit amet faucibus urna velit ac eros. Fusce lectus 
+
+\subsection*{c)}
+
+\begin{lstlisting}[label=Third]
+	CREATE TABLE `NGO`(
+	`name` 		VARCHAR(30) 	NOT NULL	PRIMARY KEY,
+	`based_in` 	VARCHAR(30)		NOT NULL,
+	`cause` 	VARCHAR(40)		NOT NULL,
+	`director` 	VARCHAR(30),
+	`phone` 	CHAR(8)						UNIQUE,
+	`revenue`	INT
+	);
+\end{lstlisting}
+
+
+
+\section{Task title}
+\subsection*{a)}
+
+
+
+
+%Remeber to fill out GAI statment below thei ----------------------------------------
+
+\newpage
+	
+\section*{Statement on Generative AI}
+
+%Rember to: 
+% 1. Delete have or have not
+% 2. Add used GAI model
+% 3. Define usage
+% 4. Add prompts
+
+\begin{table}[ht]
+		\centering
+	\begin{tabular}{l}
+			\toprule
+			\rowcolor[rgb]{0.9,0.9,0.9} \textbf{Generative AI Usage} \\
+			\midrule
+			\textit{We \textbf{have/ have not} used generative artificial intelligence tools in the completion of this project.}\\
+			ChatGPT 4o $\times$ \\ %Insert model used here 
+			\midrule
+			\rowcolor[rgb]{0.9,0.9,0.9} \textbf{Usage} \\
+			\midrule
+			\textit{We have used generative AI tools in the following ways:}\\
+			\textit{\small \textbf{The following legitimate use cases only:}}\\
+			To get background information or understand the topic / problem.\\
+			To improve writing of own text.\\
+			To find gaps in our knowledge.\\
+			\midrule
+			\rowcolor[rgb]{0.9,0.9,0.9} \textbf{Prompts} \\
+			\midrule
+			"Review my text and provide feedback on grammar, spelling, and word choice."\\
+			\\
+			\noindent
+			"" \\ %Add Prompts used here 
+			\bottomrule
+	\end{tabular}
+\end{table}
+	
+% Bibliography if needed
+% \bibliographystyle{plain}
+% \bibliography{Bibliography}
+	
+\end{document}
