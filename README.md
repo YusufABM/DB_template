@@ -1,5 +1,5 @@
 # DB_template
-This is a simple LaTeX template designed for use in the course **Database Systems / Databases / Implementation and Applications of Databases** at **Aarhus University**, Department of Computer Science.
+This is a simple LaTeX template is designed for use in the course **Database Systems / Databases / Implementation and Applications of Databases** at **Aarhus University**, Department of Computer Science.
 
 ---
 
